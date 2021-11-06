@@ -1,0 +1,27 @@
+.task__list {
+  @extend %grid;
+}
+
+.task__item {
+  width: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+
+  position: relative;
+}
+
+.task__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-text-color);
+  background-color: var(--task-bachground-color);
+}
