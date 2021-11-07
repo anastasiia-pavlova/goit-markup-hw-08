@@ -1,12 +1,21 @@
 .signup {
-  display: flex;
-  margin-left: auto;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
 }
 
 .signup__label {
-  display: flex;
-  flex-direction: column;
-  margin-right: 12px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    margin-right: 12px;
+  }
 }
 
 .signup__text {
@@ -18,7 +27,7 @@
 }
 
 .signup__input {
-  width: 358px;
+  width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 15px;
@@ -29,6 +38,7 @@
   background-color: transparent;
   font-family: inherit;
   font-size: 16px;
+  line-height: 1.25;
   outline: none;
   color: var(--footer-mail-tel-color);
   transition: border-color var(--transition-duration)
@@ -40,13 +50,22 @@
   &:focus {
     border-color: var(--complementary-accent-color);
   }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .signup__button {
   @extend .button;
-  @extend %flex;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-  align-self: flex-end;
   padding: 0;
   height: 50px;
 
@@ -55,6 +74,9 @@
   &:focus,
   &:hover {
     background-color: var(--button-background-color);
+  }
+  @media screen and (min-width: 1200px) {
+    align-self: flex-end;
   }
 }
 

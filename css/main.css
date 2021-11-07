@@ -43,13 +43,13 @@ img {
   max-width: 100%;
 }
 
-.social-links, .social-links__link, .button-close, .order__agreement, .features__thumb, .clients__link, .signup__button, .filter {
+.social-links, .social-links__link, .button-close, .order__agreement, .features__thumb, .clients__link, .filter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.task__list, .clients__list, .portfolio {
+.task__list, .portfolio {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
@@ -153,8 +153,8 @@ body {
   color: var(--complementary-accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
 }
 
 .logo--accent-black {
@@ -163,6 +163,13 @@ body {
 
 .logo--accent-white {
   color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .social-links__item {
@@ -202,7 +209,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: var(--backdrop-bg-color);
   transition: opacity var(--transition-duration) var(--transition-timing-function), visibility var(--transition-duration) var(--transition-timing-function);
 }
@@ -213,25 +220,37 @@ body {
   visibility: hidden;
 }
 
+@media screen and (max-width: 767px) {
+  .backdrop {
+    overflow-y: scroll;
+    padding: 93px 15px;
+  }
+}
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  position: relative;
   padding: 40px;
-  padding-left: 41px;
-  padding-right: 39px;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
   border-radius: 4px;
   background-color: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    min-height: 581px;
+    transition: transform var(--transition-duration) var(--transition-timing-function), opacity var(--transition-duration) var(--transition-timing-function);
+  }
 }
 
 .button-close {
@@ -338,6 +357,13 @@ body {
 .order__agreement {
   margin-bottom: 30px;
   color: var(--complementary-text-color);
+}
+
+@media screen and (max-width: 767px) {
+  .order__agreement {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .order__check-icon {
@@ -507,6 +533,11 @@ body {
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.menu-button:hover, .menu-button:focus-visible {
+  fill: var(--complementary-accent-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -701,9 +732,24 @@ body {
   margin-bottom: 16px;
 }
 
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
 .clients__item {
-  margin-top: 30px;
-  margin-left: 30px;
+  margin: 15px;
+  width: calc((100% - 2 * 30px) / 2);
 }
 
 @media screen and (min-width: 1200px) {
@@ -743,9 +789,17 @@ body {
   background-color: var(--second-background-color);
 }
 
-.footer__content {
-  display: flex;
-  align-items: baseline;
+@media screen and (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__content {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__logo {
@@ -758,7 +812,13 @@ body {
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .address__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .address__map {
@@ -778,8 +838,16 @@ body {
   color: var(--complementary-accent-color);
 }
 
-.footer__address-block {
-  margin-right: 70px;
+@media screen and (max-width: 767px) {
+  .footer__address-block {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__address-block {
+    margin-right: 70px;
+  }
 }
 
 .footer__text {
@@ -799,15 +867,32 @@ body {
   fill: var(--accent-text-color);
 }
 
-.signup {
-  display: flex;
-  margin-left: auto;
+@media screen and (max-width: 767px) {
+  .footer__social-links {
+    margin-bottom: 60px;
+  }
 }
 
-.signup__label {
-  display: flex;
-  flex-direction: column;
-  margin-right: 12px;
+@media screen and (max-width: 767px) {
+  .signup {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .signup {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .signup__label {
+    display: flex;
+    flex-direction: column;
+    margin-right: 12px;
+  }
 }
 
 .signup__text {
@@ -819,7 +904,7 @@ body {
 }
 
 .signup__input {
-  width: 358px;
+  width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 15px;
@@ -830,6 +915,7 @@ body {
   background-color: transparent;
   font-family: inherit;
   font-size: 16px;
+  line-height: 1.25;
   outline: none;
   color: var(--footer-mail-tel-color);
   transition: border-color var(--transition-duration) var(--transition-timing-function);
@@ -843,8 +929,22 @@ body {
   border-color: var(--complementary-accent-color);
 }
 
+@media screen and (max-width: 767px) {
+  .signup__input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .signup__input {
+    width: 358px;
+  }
+}
+
 .signup__button {
-  align-self: flex-end;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -852,6 +952,12 @@ body {
 
 .signup__button:focus, .signup__button:hover {
   background-color: var(--button-background-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .signup__button {
+    align-self: flex-end;
+  }
 }
 
 .signup__icon {

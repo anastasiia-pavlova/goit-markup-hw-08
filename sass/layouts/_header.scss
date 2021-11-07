@@ -111,6 +111,11 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+  &:hover,
+  &:focus-visible {
+    fill: var(--complementary-accent-color);
+  }
 
   @media screen and (min-width: 768px) {
     display: none;

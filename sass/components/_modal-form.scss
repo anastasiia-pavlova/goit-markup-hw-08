@@ -78,6 +78,11 @@
   @extend %flex;
   margin-bottom: 30px;
   color: var(--complementary-text-color);
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .order__check-icon {
