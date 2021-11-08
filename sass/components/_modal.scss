@@ -1,8 +1,12 @@
 .backdrop {
   &.is-hidden {
     .modal {
-      transform: translate(-50%, -50%) scale(0.5);
+      transform: scale(0.5);
       opacity: 0;
+
+      @media screen and (min-width: 768px) {
+        transform: translate(-50%, -50%);
+      }
     }
   }
 }
@@ -11,6 +15,10 @@
   position: relative;
   padding: 40px;
   width: 450px;
+  transform: scale(1);
+  transition: transform var(--transition-duration)
+      var(--transition-timing-function),
+    opacity var(--transition-duration) var(--transition-timing-function);
 
   border-radius: 4px;
   background-color: var(--main-background-color);
