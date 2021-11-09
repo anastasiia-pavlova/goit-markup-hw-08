@@ -1,8 +1,4 @@
 .signup {
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
-
   @media screen and (min-width: 1200px) {
     display: flex;
     margin-left: auto;
@@ -50,8 +46,11 @@
   &:focus {
     border-color: var(--complementary-accent-color);
   }
+  @media screen and (min-width: 768px) {
+    max-width: 450px;
+  }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
   }
 

@@ -67,10 +67,14 @@
   height: 120px;
   padding: 12px 16px;
   &::placeholder {
-    font-size: 12px;
-    line-height: 1.16;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.01em;
     color: var(--feedback-text-color);
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      line-height: 1.16;
+    }
   }
 }
 
@@ -79,7 +83,7 @@
   margin-bottom: 30px;
   color: var(--complementary-text-color);
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     font-size: 12px;
     line-height: 1.17;
   }
