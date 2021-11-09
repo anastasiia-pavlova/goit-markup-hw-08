@@ -498,7 +498,6 @@ body {
 .menu__container {
   display: flex;
   flex-grow: 1;
-  align-items: center;
   background-color: var(--main-background-color);
 }
 
@@ -561,6 +560,11 @@ body {
   color: var(--complementary-accent-color);
 }
 
+.navigation__link--current {
+  color: var(--complementary-accent-color);
+  position: relative;
+}
+
 @media screen and (min-width: 768px) {
   .navigation__link {
     display: block;
@@ -568,10 +572,6 @@ body {
     padding-bottom: 32px;
     font-size: 14px;
     line-height: 1.143;
-  }
-  .navigation__link--current {
-    color: var(--complementary-accent-color);
-    position: relative;
   }
   .navigation__link--current::after {
     content: "";
@@ -741,27 +741,35 @@ body {
 
 .hero {
   padding: 118px 0;
+  max-width: 480px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--hero-background-color);
   text-align: center;
-  background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/hero-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/hero-mob.jpg");
   /* outline: 1px solid tomato; */
 }
 
-@media screen and (max-width: 767px) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    max-width: 480px;
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/hero-mob@2x.jpg");
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/hero-tab.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/hero-tab@2x.jpg");
   }
 }
 
@@ -770,6 +778,13 @@ body {
     padding: 200px 0;
     max-width: 1600px;
     height: 600px;
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/hero-dek.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--gradient-color), var(--gradient-color)), url("../images/hero-dek@2x.jpg");
   }
 }
 
