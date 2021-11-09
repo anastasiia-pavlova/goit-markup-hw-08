@@ -1,11 +1,22 @@
 .filter {
-  @extend %flex;
-  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  margin-top: -15px;
+  margin-left: -8px;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
-.filter__item + .filter__item {
+.filter__item {
   margin-left: 8px;
+  margin-top: 15px;
 }
+
 .no-min-width {
   min-width: 0;
 }

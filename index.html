@@ -22,35 +22,52 @@
         <div class="container header__content">
         <nav class="main-nav">
             <a href="./index.html" lang="en" class="logo link">Web<span class="logo logo--accent-black">Studio</span></a>
+            
+                <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="menu__icon-menu" href='./images/icons.svg#menu_mobile'></use>
+                    </svg>
+                </button>
+            <div class="menu__container js-menu-container" id="menu-container">
+                <button type="button" class="menu-toggle menu-toggle--cross js-close-menu">
+                    <svg width="40" height="40" aria-label="Закрыть мобильное меню">
+                        <use class="menu__icon-cross" href='./images/icons.svg#cross'></use>
+                    </svg>
+                </button>
+
             <ul class="navigation list">
                 <li class="navigation__item"><a href="./index.html" class="link navigation__link navigation__link--current">Студия</a></li>
                 <li class="navigation__item"><a href="./portfolio.html" class="link navigation__link">Портфолио</a></li>
                 <li class="navigation__item"><a href="" class="link navigation__link">Контакты</a></li>
             </ul>
-        </nav>
-        <ul class="contact list">
-            <li class="contact__item">
-                <a href="mailto:info@devstudio.com" class="link contact__link">
-                    <svg class="contact__icon" width="16" height="12">
-                        <use href="./images/icons.svg#envelope"></use>
-                    </svg>info@devstudio.com</a>
-            </li>
-            <li class="contact__item">
-                <a href="tel:+380961111111" class="link contact__link">
-                    <svg class="contact__icon" width="10" height="16">
-                        <use href="./images/icons.svg#smartphone"></use>
-                    </svg>+38 096 111 11 11</a>
-            </li>
-        </ul>
-        <button type="button" class="menu-button" aria-expanded="false"
-            aria-controls="menu-container">
-        <svg width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню">
-            <use href='./images/icons.svg#menu_mobile'></use>
-        </svg>
-        </button>
+            <div class="menu__bottom">
+            <ul class="contact list">
+                
+                <li class="contact__item">
+                    <a href="tel:+380961111111" class="link contact__link contact__tel">
+                        <svg class="contact__icon contact__icon--tel">
+                            <use href="./images/icons.svg#smartphone"></use>
+                        </svg>+38 096 111 11 11</a>
+                </li>
+                <li class="contact__item">
+                    <a href="mailto:info@devstudio.com" class="link contact__link contact__mail">
+                        <svg class="contact__icon contact__icon--mail">
+                            <use href="./images/icons.svg#envelope"></use>
+                        </svg>info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="social list">
+                <li class="social__item"><a href="" class="link social__link--mobile">Instagram</a></li>
+                <li class="social__item"><a href="" class="link social__link--mobile">Twitter</a></li>
+                <li class="social__item"><a href="" class="link social__link--mobile">Facebook</a></li>
+                <li class="social__item"><a href="" class="link social__link--mobile">LinkedIn</a></li>
+            </ul>
         </div>
+            </div>
+        </nav>
+            
+        </div>
+       
     </header>
     <main>
         <!-- Герой -->
@@ -447,14 +464,15 @@
                 <label class="order__agreement">
                     <input type="checkbox" name="agreement" class="order__checkbox">
                     <span class="order__check-icon"></span>
-                    Соглашаюсь с рассылкой и принимаю&#160;
-                   <a href="" class="order__link">Условия договора</a> 
+                    <span>Соглашаюсь с рассылкой и принимаю&#160;<a href="" class="order__link">Условия договора</a></span>
                 </label>
                 <button type="submit" class="order__button">Отправить</button>
             </form>
         </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
+   
 </body>
 
 </html>
