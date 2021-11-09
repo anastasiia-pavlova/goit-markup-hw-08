@@ -828,15 +828,17 @@ body {
   }
 }
 
-.features__item {
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-basis: calc(100% / 2 - 30px);
-}
-
 @media screen and (max-width: 767px) {
   .features__item {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc(100% / 2 - 30px);
   }
 }
 
