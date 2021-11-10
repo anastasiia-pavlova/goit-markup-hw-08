@@ -1,10 +1,9 @@
 .hero {
   padding: 118px 0;
   // проверить после изображений
-  max-width: 480px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  // max-width: 480px;
+  // height: 400px;
+
   background-color: var(--hero-background-color);
   text-align: center;
   background-repeat: no-repeat;
@@ -34,7 +33,7 @@
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
+    // max-width: 768px;
     background-image: linear-gradient(
         var(--gradient-color),
         var(--gradient-color)
@@ -56,9 +55,11 @@
 
 @media screen and (min-width: 1200px) {
   .hero {
+    // margin-left: auto;
+    // margin-right: auto;
     padding: 200px 0;
-    max-width: 1600px;
-    height: 600px;
+    // max-width: 1600px;
+    // height: 600px;
     background-image: linear-gradient(
         var(--gradient-color),
         var(--gradient-color)

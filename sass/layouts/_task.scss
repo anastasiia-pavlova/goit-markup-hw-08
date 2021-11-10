@@ -1,3 +1,6 @@
+.no-top-padding {
+  padding-top: 0;
+}
 .task {
   @media screen and (max-width: 1199px) {
     display: none;

@@ -7,6 +7,9 @@
 }
 
 .signup__label {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: column;
@@ -48,10 +51,6 @@
   }
   @media screen and (min-width: 768px) {
     max-width: 450px;
-  }
-
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 20px;
   }
 
   @media screen and (min-width: 1200px) {

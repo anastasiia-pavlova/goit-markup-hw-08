@@ -16,6 +16,10 @@
   }
 }
 .footer__wrapper {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
@@ -57,7 +61,7 @@
 }
 
 .footer__address-block {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
 
@@ -80,10 +84,4 @@
 }
 .social-links__icons--footer {
   fill: var(--accent-text-color);
-}
-
-.footer__social-links {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
 }
